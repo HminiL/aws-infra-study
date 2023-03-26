@@ -29,4 +29,5 @@ jobs:
         pipenv install
     - name: Run Tests
       run: |
+        echo "SECRET_KEY=$SECRET_KEY" >> .env
         pipenv run python manage.py test
