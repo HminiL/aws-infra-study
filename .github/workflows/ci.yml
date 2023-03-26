@@ -29,5 +29,5 @@ jobs:
         pipenv install
     - name: Run Tests
       run: |
-        echo "DJANGO_SECRET_KEY=DJANGO_SECRET_KEY" >> .env
+        echo "DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}" >> .env
         pipenv run python manage.py test
